@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="#"><img src="res/site/img/logo.png"></a></h1>
+                        <h1><a href="#"><img src="res/site/img/logo_daupause.jpeg" style=" height: 100px;weight: 100px;"></a> Daupause</h1>
                     </div>
                 </div>
 
