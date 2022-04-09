@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Hcode\Model;
 
@@ -66,15 +66,14 @@ class Product extends Model {
 	}
 
 	public function delete()
-	{
-
-		$sql = new Sql();
-
-		$sql->query("DELETE FROM tb_products WHERE idproduct = :idproduct", [
-			':idproduct'=>$this->getidproduct()
-		]);
-
-	}
+{
+        
+        $sql = new Sql();
+        
+        $sql->query("CALL sp_products_delete(:idproduct)", [
+            ':idproduct'=>$this->getidproduct()
+        ]);
+}
 
 	public function checkPhoto()
 	{
@@ -113,6 +112,7 @@ class Product extends Model {
 
 	public function setPhoto($file)
 	{
+
 		$extension = explode('.', $file['name']);
 		$extension = end($extension);
 
@@ -169,10 +169,8 @@ class Product extends Model {
 		return $sql->select("
 			SELECT * FROM tb_categories a INNER JOIN tb_productscategories b ON a.idcategory = b.idcategory WHERE b.idproduct = :idproduct
 		", [
-
 			':idproduct'=>$this->getidproduct()
 		]);
-
 	}
 
 	public static function getPage($page = 1, $itemsPerPage = 10)
@@ -228,4 +226,4 @@ class Product extends Model {
 
 }
 
- ?>
+?>

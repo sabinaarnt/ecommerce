@@ -3,39 +3,39 @@
     <div class="block-slider block-slider4">
         <ul class="" id="bxslider-home4">
             <li>
-                <img src="res/site/img/h4-slide.png" alt="Slide">
+                <img src="/res/site/img/h4-slide5.png" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        iPhone <span class="primary">6 <strong>Plus</strong></span>
+                        Pink <span class="primary"> <strong></strong></span>
                     </h2>
-                    <h4 class="caption subtitle">Dual SIM</h4>
+                    <h4 class="caption subtitle">Base Grande</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
-            <li><img src="res/site/img/h4-slide2.png" alt="Slide">
+            <li><img src="/res/site/img/h4-slide17.png" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        by one, get one <span class="primary">50% <strong>off</strong></span>
+                        Heisenberg <span class="primary">Walter <strong>White</strong></span>
                     </h2>
-                    <h4 class="caption subtitle">school supplies & backpacks.*</h4>
+                    <h4 class="caption subtitle">Base Média</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
-            <li><img src="res/site/img/h4-slide3.png" alt="Slide">
+            <li><img src="/res/site/img/h4-slide6.png" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
+                        Jogen <span class="primary"> <strong></strong></span>
                     </h2>
-                    <h4 class="caption subtitle">Select Item</h4>
+                    <h4 class="caption subtitle">Base Média</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
-            <li><img src="res/site/img/h4-slide4.png" alt="Slide">
+            <li><img src="/res/site/img/h4-slide12.png" alt="Slide">
                 <div class="caption-group">
                     <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
+                        Mario <span class="primary">Bros <strong></strong></span>
                     </h2>
-                    <h4 class="caption subtitle">& Phone</h4>
+                    <h4 class="caption subtitle">Base Média</h4>
                     <a class="caption button-radius" href="#"><span class="icon"></span>Comprar</a>
                 </div>
             </li>
@@ -51,7 +51,7 @@
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo1">
                     <i class="fa fa-refresh"></i>
-                    <p>1 ano de garantia</p>
+                    <p>Peças</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -87,20 +87,19 @@
                         {loop="$products"}
                         <div class="single-product">
                             <div class="product-f-image">
-                                <img src={$value.desphoto} alt="">
+                                <img src="{$value.desphoto}" alt="">
                                 <div class="product-hover">
                                     <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Comprar </a>
                                     <a href="#" class="view-details-link"><i class="fa fa-link"></i> Ver detalhes</a>
                                 </div>
                             </div>
 
-                            <h2><a href="/produtcs/{$value.desurl}">{$value.desproduct}</a></h2>
+                            <h2><a href="/products/{$value.desurl}">{$value.desproduct}</a></h2>
 
                             <div class="product-carousel-price">
-                                <ins>R$ {function="formatPrice($value.vlprice)"}</ins> 
+                                <ins>R${function="formatPrice($value.vlprice)"}</ins> 
                             </div>
                         </div>
-                       
                         {/loop}
                     </div>
                 </div>
@@ -109,24 +108,3 @@
     </div>
 </div> <!-- End main content area -->
 
-<div class="brands-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="brand-wrapper">
-                    <div class="brand-list">
-                        <img src="res/site/img/brand1.png" alt="">
-                        <img src="res/site/img/brand2.png" alt="">
-                        <img src="res/site/img/brand3.png" alt="">
-                        <img src="res/site/img/brand4.png" alt="">
-                        <img src="res/site/img/brand5.png" alt="">
-                        <img src="res/site/img/brand6.png" alt="">
-                        <img src="res/site/img/brand1.png" alt="">
-                        <img src="res/site/img/brand2.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> <!-- End brands area -->

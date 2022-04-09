@@ -4,16 +4,12 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="footer-about-us">
-                    <h2>Hcode Store</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam
-                        laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure
-                        eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis
-                        magni at?</p>
+                    <h2>Daupause</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/hcodebr" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/hcodebr" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA" target="_blank"><i
-                                class="fa fa-youtube"></i></a>
+                        <a href="https://pt-br.facebook.com/daupause/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/daupause/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCD7BmiCq4OokRLRwx0N-eFQ" target="_blank"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -33,8 +29,7 @@
                 <div class="footer-menu">
                     <h2 class="footer-wid-title">Categorias</h2>
                     <ul>
-                        <?php require $this->checkTemplate("categories-menu");?>
-                                                
+                        <?php require $this->checkTemplate("categories-menu");?>                            
                     </ul>
                 </div>
             </div>
@@ -60,8 +55,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright">
-                    <p>&copy; 2017 Hcode Treinamentos. <a href="http://www.hcode.com.br"
-                            target="_blank">hcode.com.br</a></p>
+                    <p>&copy; 2022 Arnt Soluções. <a href="https://almsaeedstudio.com" target="_blank">Template usado no projeto [Almsaeed Studio]</a></p>
                 </div>
             </div>
 
@@ -97,5 +91,4 @@
 <script type="text/javascript" src="/res/site/js/bxslider.min.js"></script>
 <script type="text/javascript" src="/res/site/js/script.slider.js"></script>
 </body>
-
 </html>
