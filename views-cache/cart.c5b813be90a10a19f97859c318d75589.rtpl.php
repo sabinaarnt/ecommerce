@@ -21,10 +21,14 @@
 
                       <form action="/checkout">
                           
-                        
+                        <?php if( $error != '' ){ ?>
+
                             <div class="alert alert-danger" role="alert">
-                            Error!
+                        <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
                             </div>
+                        <?php } ?>
+
 
                           <table cellspacing="0" class="shop_table cart">
                               <thead>
@@ -82,7 +86,7 @@
 
                                   <div class="coupon">
                                       <label for="cep">CEP:</label>
-                                      <input type="text" placeholder="00000-000" value="" id="cep" class="input-text" name="zipcode">
+                                      <input type="text" placeholder="00000-000" value="<?php echo htmlspecialchars( $cart["deszipcode"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" id="cep" class="input-text" name="zipcode">
                                       <input type="submit" formmethod="post" formaction="/cart/freight" value="CÁLCULAR" class="button">
                                   </div>
 
@@ -100,7 +104,7 @@
                                           </tr>
                                           <tr class="shipping">
                                               <th>Frete</th>
-                                              <td>$5.00 <small>prazo de 0 dia(s)</small></td>
+                                              <td>R$<?php echo formatPrice($cart["vlfreight"]); ?><?php if( $cart["nrdays"] > 0 ){ ?> <small>prazo de <?php echo htmlspecialchars( $cart["nrdays"], ENT_COMPAT, 'UTF-8', FALSE ); ?> dia(s)</small><?php } ?></td>
                                           </tr>
 
                                           <tr class="order-total">

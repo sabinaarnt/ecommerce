@@ -1,4 +1,4 @@
-
+<?php if(!class_exists('Rain\Tpl')){exit;}?> 
 <div class="product-big-title-area">
     <div class="container">
         <div class="row">
@@ -17,11 +17,14 @@
         <div class="row">                
             <div class="col-md-6">
 
-                {if="$error != ''"}
+                <?php if( $error != '' ){ ?>
+
                 <div class="alert alert-danger">
-                    {$error}
+                    <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
                 </div>
-                {/if}
+                <?php } ?>
+
 
                 <form action="/login" id="login-form-wrap" class="login" method="post">
                     <h2>Acessar</h2>
@@ -49,28 +52,31 @@
             </div>
             <div class="col-md-6">
                 
-                {if="$errorRegister != ''"}
+                <?php if( $errorRegister != '' ){ ?>
+
                 <div class="alert alert-danger">
-                    {$errorRegister}
+                    <?php echo htmlspecialchars( $errorRegister, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+
                 </div>
-                {/if}
+                <?php } ?>
+
 
                 <form id="register-form-wrap" action="/register" class="register" method="post">
                     <h2>Criar conta</h2>
                     <p class="form-row form-row-first">
                         <label for="nome">Nome Completo <span class="required">*</span>
                         </label>
-                        <input type="text" id="nome" name="name" class="input-text" value="{$registerValues.name}">
+                        <input type="text" id="nome" name="name" class="input-text" value="<?php echo htmlspecialchars( $registerValues["name"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-first">
                         <label for="email">E-mail <span class="required">*</span>
                         </label>
-                        <input type="email" id="email" name="email" class="input-text" value="{$registerValues.email}">
+                        <input type="email" id="email" name="email" class="input-text" value="<?php echo htmlspecialchars( $registerValues["email"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-first">
                         <label for="phone">Telefone
                         </label>
-                        <input type="text" id="phone" name="phone" class="input-text" value="{$registerValues.phone}">
+                        <input type="text" id="phone" name="phone" class="input-text" value="<?php echo htmlspecialchars( $registerValues["phone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-last">
                         <label for="senha">Senha <span class="required">*</span>
@@ -89,15 +95,3 @@
         </div>
     </div>
 </div>
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
