@@ -6,9 +6,9 @@ use Rain\Tpl;
 
 class Mailer {
 	
-	const USERNAME = "****@****.com";
-	const PASSWORD = "******";
-	const NAME_FROM = "Hcode Store";
+	const USERNAME = "daupauseteste@gmail.com";
+	const PASSWORD = "sa721089";
+	const NAME_FROM = "Daupause Store";
 
 	private $mail;
 
@@ -33,7 +33,7 @@ class Mailer {
 
 		$this->mail = new \PHPMailer;
 
-		//Tell PHPMailer to use SMTP
+				//Tell PHPMailer to use SMTP
 		$this->mail->isSMTP();
 
 		//Enable SMTP debugging

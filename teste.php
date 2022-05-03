@@ -734,3 +734,6 @@ $app->post("/profile/change-password", function(){
 
 
  ?>
+© 2022 GitHub, Inc.
+Terms
+Privacy

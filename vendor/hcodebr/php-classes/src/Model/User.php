@@ -212,7 +212,6 @@ class User extends Model {
 
 		if (count($results) === 0)
 		{
-
 			throw new \Exception("Não foi possível recuperar a senha.");
 
 		}
@@ -222,14 +221,14 @@ class User extends Model {
 			$data = $results[0];
 
 			$results2 = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser, :desip)", array(
-				":iduser"=>$data['iduser'],
-				":desip"=>$_SERVER['REMOTE_ADDR']
+				":iduser"=>$data["iduser"],
+				":desip"=>$_SERVER["REMOTE_ADDR"]
 			));
 
 			if (count($results2) === 0)
 			{
 
-				throw new \Exception("Não foi possível recuperar a senha.");
+				throw new \Exception("Não foi possível recuperar a senha");
 
 			}
 			else
@@ -243,22 +242,23 @@ class User extends Model {
 
 				if ($inadmin === true) {
 
-					$link = "http://www.hcodecommerce.com.br/admin/forgot/reset?code=$code";
+					$link = "http://www.daupause.com.br/admin/forgot/reset?code=$code";
 
 				} else {
 
-					$link = "http://www.hcodecommerce.com.br/forgot/reset?code=$code";
+					$link = "http://www.daupause.com.br/forgot/reset?code=$code";
 					
 				}				
 
-				$mailer = new Mailer($data['desemail'], $data['desperson'], "Redefinir senha da Loja Daupause", "forgot", array(
-					"name"=>$data['desperson'],
+				
+				$mailer = new Mailer($data["desemail"], $data["desperson"], "Redefinir Senha da Loja Daupause", "forgot", array(
+					"name"=>$data["desperson"],
 					"link"=>$link
 				));				
 
 				$mailer->send();
 
-				return $link;
+				return $data;
 
 			}
 
@@ -303,7 +303,7 @@ class User extends Model {
 
 	}
 	
-	public static function setForgotUsed($idrecovery)
+	public static function setFogotUsed($idrecovery)
 	{
 
 		$sql = new Sql();
